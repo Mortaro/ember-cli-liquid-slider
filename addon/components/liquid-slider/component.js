@@ -42,6 +42,10 @@ export default Ember.Component.extend({
 
   actions: {
 
+    clickSlide(slide) {
+      this.sendAction('click', slide);
+    },
+
     prev() {
       this.stop();
       let lastIndex = this.get('slides.length') - 1;

@@ -1,6 +1,6 @@
 {{#each slides as |slide index|}}
   {{#liquid-if (eq index activeIndex) use=animation}}
-    <div>
+    <div {{action 'clickSlide' slide}}>
       <img src={{get slide image}}/>
       <div> {{get slide caption}} </div>
     </div>
