@@ -1,0 +1,1 @@
+export { default } from 'liquid-slider/components/liquid-slider/component';

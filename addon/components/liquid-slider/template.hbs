@@ -1,0 +1,13 @@
+{{#each slides as |slide index|}}
+  {{#liquid-if (eq index activeIndex) use=animation}}
+    <div>
+      <img src={{get slide image}}/>
+      <div> {{get slide caption}} </div>
+    </div>
+  {{/liquid-if}}
+{{/each}}
+
+{{#liquid-if (gt slides.length 1) use=animation}}
+  <button {{action 'prev'}}> {{prevText}} </button>
+  <button {{action 'next'}}> {{nextText}} </button>
+{{/liquid-if}}
